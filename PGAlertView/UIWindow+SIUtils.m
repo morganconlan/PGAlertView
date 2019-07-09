@@ -1,6 +1,6 @@
 //
 //  UIWindow+SIUtils.m
-//  SIAlertView
+//  PGAlertView
 //
 //  Created by Kevin Cao on 13-11-1.
 //  Copyright (c) 2013年 Sumi Interactive. All rights reserved.

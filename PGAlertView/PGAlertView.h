@@ -15,51 +15,51 @@ FOUNDATION_EXPORT double PGAlertViewVersionNumber;
 //! Project version string for PGAlertView.
 FOUNDATION_EXPORT const unsigned char PGAlertViewVersionString[];
 
-extern NSString *const SIAlertViewWillShowNotification;
-extern NSString *const SIAlertViewDidShowNotification;
-extern NSString *const SIAlertViewWillDismissNotification;
-extern NSString *const SIAlertViewDidDismissNotification;
+extern NSString *const PGAlertViewWillShowNotification;
+extern NSString *const PGAlertViewDidShowNotification;
+extern NSString *const PGAlertViewWillDismissNotification;
+extern NSString *const PGAlertViewDidDismissNotification;
 
-typedef NS_ENUM(NSInteger, SIAlertViewButtonType) {
-    SIAlertViewButtonTypeDefault = 0,
-    SIAlertViewButtonTypeDestructive,
-    SIAlertViewButtonTypeCancel
+typedef NS_ENUM(NSInteger, PGAlertViewButtonType) {
+    PGAlertViewButtonTypeDefault = 0,
+    PGAlertViewButtonTypeDestructive,
+    PGAlertViewButtonTypeCancel
 };
 
-typedef NS_ENUM(NSInteger, SIAlertViewBackgroundStyle) {
-    SIAlertViewBackgroundStyleGradient = 0,
-    SIAlertViewBackgroundStyleSolid,
+typedef NS_ENUM(NSInteger, PGAlertViewBackgroundStyle) {
+    PGAlertViewBackgroundStyleGradient = 0,
+    PGAlertViewBackgroundStyleSolid,
 };
 
-typedef NS_ENUM(NSInteger, SIAlertViewButtonsListStyle) {
-    SIAlertViewButtonsListStyleNormal = 0,
-    SIAlertViewButtonsListStyleRows
+typedef NS_ENUM(NSInteger, PGAlertViewButtonsListStyle) {
+    PGAlertViewButtonsListStyleNormal = 0,
+    PGAlertViewButtonsListStyleRows
 };
 
-typedef NS_ENUM(NSInteger, SIAlertViewTransitionStyle) {
-    SIAlertViewTransitionStyleSlideFromBottom = 0,
-    SIAlertViewTransitionStyleSlideFromTop,
-    SIAlertViewTransitionStyleFade,
-    SIAlertViewTransitionStyleBounce,
-    SIAlertViewTransitionStyleDropDown
+typedef NS_ENUM(NSInteger, PGAlertViewTransitionStyle) {
+    PGAlertViewTransitionStyleSlideFromBottom = 0,
+    PGAlertViewTransitionStyleSlideFromTop,
+    PGAlertViewTransitionStyleFade,
+    PGAlertViewTransitionStyleBounce,
+    PGAlertViewTransitionStyleDropDown
 };
 
-@class SIAlertView;
-typedef void(^SIAlertViewHandler)(SIAlertView *alertView);
+@class PGAlertView;
+typedef void(^PGAlertViewHandler)(PGAlertView *alertView);
 
-@interface SIAlertView : UIView
+@interface PGAlertView : UIView
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *message;
 
-@property (nonatomic, assign) SIAlertViewTransitionStyle transitionStyle; // default is SIAlertViewTransitionStyleSlideFromBottom
-@property (nonatomic, assign) SIAlertViewBackgroundStyle backgroundStyle; // default is SIAlertViewBackgroundStyleGradient
-@property (nonatomic, assign) SIAlertViewButtonsListStyle buttonsListStyle; // default is SIAlertViewButtonsListStyleNormal
+@property (nonatomic, assign) PGAlertViewTransitionStyle transitionStyle; // default is PGAlertViewTransitionStyleSlideFromBottom
+@property (nonatomic, assign) PGAlertViewBackgroundStyle backgroundStyle; // default is PGAlertViewBackgroundStyleGradient
+@property (nonatomic, assign) PGAlertViewButtonsListStyle buttonsListStyle; // default is PGAlertViewButtonsListStyleNormal
 
-@property (nonatomic, copy) SIAlertViewHandler willShowHandler;
-@property (nonatomic, copy) SIAlertViewHandler didShowHandler;
-@property (nonatomic, copy) SIAlertViewHandler willDismissHandler;
-@property (nonatomic, copy) SIAlertViewHandler didDismissHandler;
+@property (nonatomic, copy) PGAlertViewHandler willShowHandler;
+@property (nonatomic, copy) PGAlertViewHandler didShowHandler;
+@property (nonatomic, copy) PGAlertViewHandler willDismissHandler;
+@property (nonatomic, copy) PGAlertViewHandler didDismissHandler;
 
 @property (nonatomic, readonly, getter = isVisible) BOOL visible;
 
@@ -77,14 +77,24 @@ typedef void(^SIAlertViewHandler)(SIAlertView *alertView);
 @property (nonatomic, assign) CGFloat cornerRadius NS_AVAILABLE_IOS(5_0) UI_APPEARANCE_SELECTOR; // default is 2.0
 @property (nonatomic, assign) CGFloat shadowRadius NS_AVAILABLE_IOS(5_0) UI_APPEARANCE_SELECTOR; // default is 8.0
 
-- (void)setDefaultButtonImage:(UIImage *)defaultButtonImage forState:(UIControlState)state NS_AVAILABLE_IOS(5_0) UI_APPEARANCE_SELECTOR;
-- (void)setCancelButtonImage:(UIImage *)cancelButtonImage forState:(UIControlState)state NS_AVAILABLE_IOS(5_0) UI_APPEARANCE_SELECTOR;
-- (void)setDestructiveButtonImage:(UIImage *)destructiveButtonImage forState:(UIControlState)state NS_AVAILABLE_IOS(5_0) UI_APPEARANCE_SELECTOR;
+- (void)setDefaultButtonImage:(UIImage *)defaultButtonImage
+                     forState:(UIControlState)state NS_AVAILABLE_IOS(5_0) UI_APPEARANCE_SELECTOR;
 
-- (id)initWithTitle:(NSString *)title andMessage:(NSString *)message;
-- (void)addButtonWithTitle:(NSString *)title type:(SIAlertViewButtonType)type handler:(SIAlertViewHandler)handler;
+- (void)setCancelButtonImage:(UIImage *)cancelButtonImage
+                    forState:(UIControlState)state NS_AVAILABLE_IOS(5_0) UI_APPEARANCE_SELECTOR;
+
+- (void)setDestructiveButtonImage:(UIImage *)destructiveButtonImage
+                         forState:(UIControlState)state NS_AVAILABLE_IOS(5_0) UI_APPEARANCE_SELECTOR;
+
+- (id)initWithTitle:(NSString *)title
+         andMessage:(NSString *)message;
+
+- (void)addButtonWithTitle:(NSString *)title
+                      type:(PGAlertViewButtonType)type
+                   handler:(PGAlertViewHandler)handler;
 
 - (void)show;
+
 - (void)dismissAnimated:(BOOL)animated;
 
 @end
