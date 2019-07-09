@@ -10,6 +10,10 @@
 		01D2829522D5110700D41F6E /* PGAlertView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D2828B22D5110700D41F6E /* PGAlertView.framework */; };
 		01D2829A22D5110700D41F6E /* PGAlertViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D2829922D5110700D41F6E /* PGAlertViewTests.m */; };
 		01D2829C22D5110700D41F6E /* PGAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 01D2828E22D5110700D41F6E /* PGAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01D282AA22D512B500D41F6E /* PGAlertView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 01D282A522D512B400D41F6E /* PGAlertView.bundle */; };
+		01D282AB22D512B500D41F6E /* UIWindow+SIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D282A622D512B400D41F6E /* UIWindow+SIUtils.m */; };
+		01D282AD22D512B500D41F6E /* PGAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D282A822D512B500D41F6E /* PGAlertView.m */; };
+		01D282AE22D512B500D41F6E /* UIWindow+SIUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 01D282A922D512B500D41F6E /* UIWindow+SIUtils.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		01D2829422D5110700D41F6E /* PGAlertViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PGAlertViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01D2829922D5110700D41F6E /* PGAlertViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGAlertViewTests.m; sourceTree = "<group>"; };
 		01D2829B22D5110700D41F6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01D282A522D512B400D41F6E /* PGAlertView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PGAlertView.bundle; sourceTree = "<group>"; };
+		01D282A622D512B400D41F6E /* UIWindow+SIUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+SIUtils.m"; sourceTree = "<group>"; };
+		01D282A822D512B500D41F6E /* PGAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGAlertView.m; sourceTree = "<group>"; };
+		01D282A922D512B500D41F6E /* UIWindow+SIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+SIUtils.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +79,12 @@
 		01D2828D22D5110700D41F6E /* PGAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				01D2828E22D5110700D41F6E /* PGAlertView.h */,
 				01D2828F22D5110700D41F6E /* Info.plist */,
+				01D282A522D512B400D41F6E /* PGAlertView.bundle */,
+				01D2828E22D5110700D41F6E /* PGAlertView.h */,
+				01D282A822D512B500D41F6E /* PGAlertView.m */,
+				01D282A922D512B500D41F6E /* UIWindow+SIUtils.h */,
+				01D282A622D512B400D41F6E /* UIWindow+SIUtils.m */,
 			);
 			path = PGAlertView;
 			sourceTree = "<group>";
@@ -93,6 +105,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01D282AE22D512B500D41F6E /* UIWindow+SIUtils.h in Headers */,
 				01D2829C22D5110700D41F6E /* PGAlertView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,6 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01D282AA22D512B500D41F6E /* PGAlertView.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +207,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01D282AD22D512B500D41F6E /* PGAlertView.m in Sources */,
+				01D282AB22D512B500D41F6E /* UIWindow+SIUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
