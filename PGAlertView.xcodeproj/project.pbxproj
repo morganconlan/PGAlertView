@@ -13,7 +13,7 @@
 		01D282AA22D512B500D41F6E /* PGAlertView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 01D282A522D512B400D41F6E /* PGAlertView.bundle */; };
 		01D282AB22D512B500D41F6E /* UIWindow+SIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D282A622D512B400D41F6E /* UIWindow+SIUtils.m */; };
 		01D282AD22D512B500D41F6E /* PGAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D282A822D512B500D41F6E /* PGAlertView.m */; };
-		01D282AE22D512B500D41F6E /* UIWindow+SIUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 01D282A922D512B500D41F6E /* UIWindow+SIUtils.h */; };
+		01D282AE22D512B500D41F6E /* UIWindow+SIUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 01D282A922D512B500D41F6E /* UIWindow+SIUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
